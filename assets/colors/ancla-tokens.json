@@ -1,0 +1,49 @@
+{
+  "name": "Ancla Seguros",
+  "version": "2.0.0",
+  "description": "Design tokens oficiales de Ancla Seguros",
+  "colors": {
+    "primary": {
+      "brand":  { "hex": "#392dcf", "rgb": "57, 45, 207",  "usage": "Identidad, componentes de marca, fondo brand" },
+      "cta":    { "hex": "#ff8322", "rgb": "255, 131, 34", "usage": "EXCLUSIVO para CTAs. Nunca decorativo." }
+    },
+    "backgrounds": {
+      "dark":   { "hex": "#08071a", "rgb": "8, 7, 26",     "usage": "Hero, secciones nocturnas, premium" },
+      "brand":  { "hex": "#392dcf", "rgb": "57, 45, 207",  "usage": "Banners de marca, CTAs contextuales" },
+      "light":  { "hex": "#f4f7fc", "rgb": "244, 247, 252", "usage": "Contenido denso, formularios, info" }
+    },
+    "accents": {
+      "cyan":   { "hex": "#2bd3f5", "rgb": "43, 211, 245", "usage": "Highlights, íconos destacados" },
+      "rose":   { "hex": "#ca4bff", "rgb": "202, 75, 255", "usage": "Gradientes, badges, énfasis" }
+    },
+    "text": {
+      "on_dark":  { "hex": "#ffffff", "usage": "Sobre bg-dark y bg-brand" },
+      "on_light": { "hex": "#08071a", "usage": "Sobre bg-light" }
+    }
+  },
+  "typography": {
+    "family": "Plus Jakarta Sans",
+    "weights": [200, 300, 400, 500, 600, 700, 800],
+    "fallback": "system-ui, sans-serif",
+    "source": "https://fonts.google.com/specimen/Plus+Jakarta+Sans"
+  },
+  "spacing": {
+    "base": 8,
+    "scale": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
+  },
+  "radii": {
+    "sm":  8,
+    "md":  12,
+    "lg":  16,
+    "xl":  24,
+    "2xl": 32,
+    "full": 9999
+  },
+  "rules": [
+    "El naranjo #ff8322 es EXCLUSIVO para CTAs. Nunca decorativo.",
+    "Sobre fondo brand (#392dcf): texto siempre blanco, nunca #08071a.",
+    "No mezclar fondos (dark/brand/light) en el mismo bloque visual.",
+    "Nunca gradientes entre azul principal y naranjo.",
+    "Plus Jakarta Sans es la fuente exclusiva. No Inter, Roboto, Arial ni system fonts."
+  ]
+}

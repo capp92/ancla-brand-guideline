@@ -1,0 +1,58 @@
+/* =====================================================================
+   Ancla Seguros — Design Tokens
+   Copiar y pegar al inicio de cualquier CSS para heredar la marca.
+   ===================================================================== */
+
+:root {
+  /* ---- Colores primarios ------------------------------------------ */
+  --ancla-brand:        #392dcf;   /* Azul principal — dominante en marca */
+  --ancla-cta:          #ff8322;   /* Naranjo — EXCLUSIVO para CTAs */
+
+  /* ---- Fondos ----------------------------------------------------- */
+  --ancla-bg-dark:      #08071a;   /* Fondo hero, nocturno, secciones premium */
+  --ancla-bg-brand:     #392dcf;   /* Fondo de identidad fuerte, texto blanco */
+  --ancla-bg-light:     #f4f7fc;   /* Fondo light para contenido denso */
+
+  /* ---- Acentos ---------------------------------------------------- */
+  --ancla-cyan:         #2bd3f5;   /* Calipso — highlights e íconos */
+  --ancla-rose:         #ca4bff;   /* Rosa/violeta — gradientes y badges */
+
+  /* ---- Texto ------------------------------------------------------ */
+  --ancla-text-dark:    #ffffff;   /* Sobre bg-dark y bg-brand */
+  --ancla-text-light:   #08071a;   /* Sobre bg-light */
+  --ancla-text-muted-dark:  rgba(255, 255, 255, 0.64);
+  --ancla-text-muted-light: rgba(8, 7, 26, 0.64);
+
+  /* ---- Gradientes (permitidos) ------------------------------------ */
+  --ancla-gradient-accent: linear-gradient(135deg, #2bd3f5 0%, #ca4bff 100%);
+  --ancla-gradient-hero:   radial-gradient(ellipse at top, rgba(57, 45, 207, 0.3), transparent 60%);
+
+  /* ---- Tipografía ------------------------------------------------- */
+  --ancla-font: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ---- Espaciado (base 8px) --------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* ---- Radios ----------------------------------------------------- */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ---- Sombras (tintadas en brand) -------------------------------- */
+  --shadow-card:     0 4px 20px rgba(57, 45, 207, 0.10);
+  --shadow-hover:    0 8px 30px rgba(57, 45, 207, 0.18);
+  --shadow-floating: 0 20px 60px rgba(8, 7, 26, 0.40);
+  --shadow-cta-glow: 0 8px 24px rgba(255, 131, 34, 0.35);
+}
