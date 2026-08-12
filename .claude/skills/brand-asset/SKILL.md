@@ -23,6 +23,15 @@ contenido al contexto y hay que re-emitirlo para escribirlo). Si el asset solo
 existe en Design pero también está en el disco (Drive, `ancla-web`,
 `ancla-web-propietarios`), busca el local con `mdfind` y copia ese — no lo bajes.
 
+**Si viene de un proyecto de trabajo de Claude Design** (Cristóbal pasa un link
+`claude.ai/design/p/<uuid>`): leer primero `para-el-repo/INSTRUCCIONES.md` de ese
+proyecto — dice qué cambió y por qué. Bajar **solo** los archivos que cambiaron, y
+si una variante se deriva por regla (`on-light` = `on-dark` con
+`fill="white"` → `#392dcf`), generarla en local con `sed` en vez de bajarla:
+menos transcripción, menos riesgo. Cuando solo cambió parte del arte, reconstruir
+el archivo por script tomando los paths intactos del que ya está en el repo y
+transcribiendo únicamente los nuevos.
+
 ## Procedimiento
 
 1. **Archivo al repo.** `assets/logos/` · `assets/icons/` · `assets/patterns/` ·
