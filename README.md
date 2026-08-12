@@ -20,13 +20,14 @@ ancla-brand-guideline/
 ├── index.html                          ← La presentación completa (16 secciones)
 ├── README.md                           ← Este archivo
 └── assets/
-    ├── logos/                          ← 4 variantes Seguros + isotipo + Recupera
-    │   ├── logo-ancla-on-dark.svg      ← Sobre fondo oscuro (#08071a) o brand (#392dcf)
-    │   ├── logo-ancla-on-light.svg     ← Sobre fondo claro (#f4f7fc)
-    │   ├── logo-ancla-mono-white.svg   ← Monocromo blanco (para stamps y overlays)
-    │   ├── logo-ancla-mono-dark.svg    ← Monocromo oscuro (para grabados)
-    │   ├── isotipo-ancla.svg           ← Solo la "A" (favicon, avatar, watermark)
-    │   └── logo-ancla-recupera-on-dark.svg ← Marca Ancla Recupera (solo sobre dark)
+    ├── logos/                          ← 2 archivos por marca + isotipo
+    │   ├── logo-ancla-on-dark.svg      ← Seguros sobre dark (#08071a) o brand (#392dcf)
+    │   ├── logo-ancla-on-light.svg     ← Seguros sobre claro — texto en brand #392dcf
+    │   ├── logo-ancla-recupera-on-dark.svg  ← Recupera sobre dark
+    │   ├── logo-ancla-recupera-on-light.svg ← Recupera sobre claro — texto en brand
+    │   └── isotipo-ancla.svg           ← Solo la "A" (favicon, avatar, watermark)
+    │                                     No hay versiones monocromas: a 1 tinta se usa
+    │                                     el mismo archivo en un solo color.
     ├── icons/                          ← 30 íconos custom en estilo Lucide
     │   └── (arrow-right, bank, calculator, chart-down, shield-check, …)
     ├── colors/
@@ -40,7 +41,7 @@ ancla-brand-guideline/
 
 ```
 01  Esencia               ← Propósito, propuesta, principios, personalidad
-02  Logo                  ← 5 variantes + descarga inline por card
+02  Logo                  ← 2 archivos por marca + isotipo, descarga inline por card
 03  Color                 ← Sistema dual primary (dark ↔ brand) + acentos
 04  Tipografía            ← Plus Jakarta Sans, escala canónica
 05  Iconografía           ← Sistema Lucide, 30 íconos custom
@@ -76,7 +77,8 @@ ancla-brand-guideline/
 
 1. **Dual primary.** Dark (`#08071a`) y Brand (`#392dcf`) son co-protagonistas. Alterna entre ambos como fondo principal para que la marca no se vuelva monótona. Light (`#f4f7fc`) es soporte para contenido denso.
 2. El naranjo **nunca** decora. Solo acción.
-3. Sobre fondo dark o brand, el texto es blanco. Siempre.
+3. Sobre fondo dark o brand, el texto es blanco. Siempre. Sobre fondo claro, el logo va con
+   texto en brand `#392dcf` — el texto negro no se usa, y no existen versiones monocromas.
 4. Un solo CTA por pantalla.
 5. Cifras concretas en el copy. "25–40% de ahorro" > "ahorra mucho".
 6. El villano es el desconocimiento, no los bancos.

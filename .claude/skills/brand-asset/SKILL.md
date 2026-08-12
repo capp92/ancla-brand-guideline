@@ -1,6 +1,6 @@
 ---
 name: brand-asset
-description: Agrega o actualiza un asset de marca Ancla (logo, ícono, patrón, token, variante) y lo sincroniza en las tres superficies — repo, brand.anclaseguros.cl y el proyecto de Claude Design. Úsalo cuando el usuario cree o cambie un logo, una variante (on-light, mono, nueva marca), un ícono, un token de color o una sección del guideline, o cuando pida "sincronizar con Design", "subir esto al design system" o "que se vea en la página".
+description: Agrega o actualiza un asset de marca Ancla (logo, ícono, patrón, token, variante) y lo sincroniza en las tres superficies — repo, brand.anclaseguros.cl y el proyecto de Claude Design. Úsalo cuando el usuario cree o cambie un logo, una variante (on-dark, on-light, nueva marca), un ícono, un token de color o una sección del guideline, o cuando pida "sincronizar con Design", "subir esto al design system" o "que se vea en la página".
 ---
 
 # Sincronizar un asset de marca Ancla
@@ -27,9 +27,10 @@ existe en Design pero también está en el disco (Drive, `ancla-web`,
 
 1. **Archivo al repo.** `assets/logos/` · `assets/icons/` · `assets/patterns/` ·
    `assets/colors/`. Convención: `logo-ancla-<marca>-<contexto>.svg`, con
-   contexto ∈ `on-dark` · `on-light` · `mono-white` · `mono-dark`.
-   Variante de color nueva = `sed` sobre los `fill` del SVG existente, no un
-   export nuevo (los de Inkscape pesan 175 KB por los glyphs embutidos).
+   contexto ∈ `on-dark` (texto blanco) · `on-light` (texto brand `#392dcf`).
+   **Son los dos únicos contextos**: no hay monocromas y el texto negro no se usa.
+   Variante nueva = `sed` sobre los `fill` del SVG existente, no un export nuevo
+   (los de Inkscape pesan 175 KB por los glyphs embutidos).
 
 2. **`index.html` — mostrarlo.** Buscar por texto, no por línea:
    - §02 Logo: bloque `Variantes secundarias` (grid de 3) o
@@ -66,7 +67,7 @@ existe en Design pero también está en el disco (Drive, `ancla-web`,
    Crear `guidelines/<tema>.card.html`. La **primera línea** debe ser el marcador
    o la card no aparece:
    ```html
-   <!-- @dsCard group="Brand" viewport="700x160" name="Logo sobre light y mono" subtitle="Variantes secundarias" -->
+   <!-- @dsCard group="Brand" viewport="700x160" name="Logo sobre fondo claro" subtitle="Texto en brand #392dcf" -->
    ```
    Luego un HTML mínimo que linkee `../styles.css` y use tokens `--ancla-*`
    (`--ancla-bg-dark`, `--ancla-bg-brand`, `--ancla-bg-light`,
@@ -88,5 +89,6 @@ existe en Design pero también está en el disco (Drive, `ancla-web`,
   no se ve — y parece que el sync falló.
 - `write_files` acepta máximo 256 archivos por llamada; el mismo `planId` sirve
   para varias llamadas.
-- Si el asset es de **Ancla Recupera**, hoy solo existe la variante `on-dark`:
-  no lo pongas sobre fondo brand ni claro hasta que exista la variante.
+- Cada marca tiene exactamente **dos** archivos (`on-dark`, `on-light`). Si te
+  piden un tercero (mono, negro, alias con otro nombre), es señal de que hay que
+  revisar la decisión de 2026-08-12 en `docs/sync-design.md`, no de agregarlo.

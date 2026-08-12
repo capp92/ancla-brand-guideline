@@ -1316,7 +1316,7 @@ section.light .text-muted { color: var(--muted-light); }
         <p class="lead">
           La "A" de Ancla es un isotipo con volumen: dos planos en cian y violeta que forman la letra,
           acompañada del wordmark "ANCLA SEGUROS". Hay <strong>una versión primaria que cubre el 99% de los casos</strong>
-          (la multicolor sobre dark/brand) y 4 variantes para excepciones puntuales.
+          (texto blanco sobre dark/brand), una para fondo claro (texto brand) y el isotipo para espacios chicos. Nada más.
         </p>
 
         <div class="stack-lg">
@@ -1358,47 +1358,42 @@ section.light .text-muted { color: var(--muted-light); }
             </p>
           </div>
 
-          <!-- Variantes secundarias (excepciones) -->
+          <!-- Variante para fondo claro (única excepción) -->
           <div>
-            <h3 class="sub">Variantes secundarias · solo para excepciones</h3>
+            <h3 class="sub">Sobre fondo claro · la única excepción</h3>
             <p class="text-muted mb-4">
-              Las 4 variantes de abajo cubren <strong>casos puntuales</strong> donde el primario no aplica: fondo light, impresión a 1 tinta, o cuando solo se necesita la "A".
+              Cuando el fondo es claro (<code>#f4f7fc</code> o blanco), el logo cambia el texto a
+              <strong>brand <code>#392dcf</code></strong>. El isotipo no se toca: sigue cyan + violeta.
+              <strong>El texto negro no se usa nunca.</strong>
             </p>
-            <div class="grid-3">
+            <div class="grid-2">
               <div>
                 <div class="logo-showcase logo-showcase-light">
-                  <div class="tag" style="color: rgba(8,7,26,0.6);">Sobre fondo light</div>
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Sobre light #f4f7fc</div>
                   <img src="assets/logos/logo-ancla-on-light.svg" alt="Logo sobre light">
                 </div>
                 <a href="assets/logos/logo-ancla-on-light.svg" download class="chip-mini">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   <span>logo-ancla-on-light.svg</span>
                 </a>
-                <p class="text-muted" style="font-size: 12px; margin-top: 8px;"><strong>Solo</strong> sobre <code>#f4f7fc</code> (formularios, contenido denso).</p>
+                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Formularios, contenido denso, documentos.</p>
               </div>
               <div>
-                <div class="logo-showcase logo-showcase-dark">
-                  <div class="tag" style="color: rgba(255,255,255,0.6);">Mono blanco</div>
-                  <img src="assets/logos/logo-ancla-mono-white.svg" alt="Logo mono blanco">
+                <div class="logo-showcase" style="background: #ffffff; border: 1px solid var(--hairline-light);">
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Sobre blanco</div>
+                  <img src="assets/logos/logo-ancla-on-light.svg" alt="Logo sobre blanco">
                 </div>
-                <a href="assets/logos/logo-ancla-mono-white.svg" download class="chip-mini">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  <span>logo-ancla-mono-white.svg</span>
-                </a>
-                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Stamp sobre foto oscura, bordado 1 tinta, watermark.</p>
-              </div>
-              <div>
-                <div class="logo-showcase logo-showcase-light">
-                  <div class="tag" style="color: rgba(8,7,26,0.6);">Mono oscuro</div>
-                  <img src="assets/logos/logo-ancla-mono-dark.svg" alt="Logo mono oscuro">
-                </div>
-                <a href="assets/logos/logo-ancla-mono-dark.svg" download class="chip-mini">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  <span>logo-ancla-mono-dark.svg</span>
-                </a>
-                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Grabado/impresión 1 tinta sobre claro (taza, libreta).</p>
+                <span class="chip-mini" style="opacity: 0.5; pointer-events: none;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Mismo archivo</span>
+                </span>
+                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Papelería, facturas, PDF, impresión a color.</p>
               </div>
             </div>
+            <p class="text-muted" style="font-size: 13px; margin-top: 16px; padding: 12px 16px; background: rgba(43,211,245,0.08); border-left: 3px solid var(--cyan); border-radius: 6px;">
+              <strong>No hay versiones monocromas.</strong> Para impresión a una tinta, bordado o grabado, el
+              proveedor recibe este mismo archivo o el isotipo y lo reproduce en un solo color — no hay un SVG aparte que mantener.
+            </p>
           </div>
 
           <!-- Isotipo -->
@@ -1466,10 +1461,30 @@ section.light .text-muted { color: var(--muted-light); }
                   <span>logo-ancla-recupera-on-dark.svg</span>
                 </a>
               </div>
+              <div>
+                <div class="logo-showcase logo-showcase-light" style="min-height: 180px;">
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Ancla Seguros · sobre claro</div>
+                  <img src="assets/logos/logo-ancla-on-light.svg" alt="Logo Ancla Seguros sobre claro" style="max-height: 56px;">
+                </div>
+                <a href="assets/logos/logo-ancla-on-light.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-on-light.svg</span>
+                </a>
+              </div>
+              <div>
+                <div class="logo-showcase logo-showcase-light" style="min-height: 180px;">
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Ancla Recupera · sobre claro</div>
+                  <img src="assets/logos/logo-ancla-recupera-on-light.svg" alt="Logo Ancla Recupera sobre claro" style="max-height: 48px;">
+                </div>
+                <a href="assets/logos/logo-ancla-recupera-on-light.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-recupera-on-light.svg</span>
+                </a>
+              </div>
             </div>
             <p class="text-muted" style="font-size: 13px; margin-top: 16px; padding: 12px 16px; background: rgba(43,211,245,0.08); border-left: 3px solid var(--cyan); border-radius: 6px;">
-              Recupera hoy tiene <strong>una sola variante</strong> (wordmark blanco). Mientras no exista una versión on-light o mono,
-              toda pieza de Recupera va sobre fondo dark. Y nunca los dos wordmarks juntos en la misma pieza.
+              Cada marca tiene dos archivos y ninguno más: <strong>on-dark</strong> (texto blanco) y
+              <strong>on-light</strong> (texto brand <code>#392dcf</code>). Nunca los dos wordmarks juntos en la misma pieza.
             </p>
           </div>
 
@@ -2980,7 +2995,7 @@ body {
           <!-- Favicon -->
           <div>
             <h3 class="sub">Favicon · App icons</h3>
-            <p class="text-muted mb-4">El isotipo "A" funciona en cualquier tamaño. Set completo abajo. Para favicons sobre fondo dark/brand usa el isotipo color, sobre fondo blanco usa mono-dark.</p>
+            <p class="text-muted mb-4">El isotipo "A" funciona en cualquier tamaño y sobre cualquiera de los tres fondos: el mismo archivo a color sirve para dark, brand y blanco. Set completo abajo.</p>
             <div class="grid-4" style="gap: 16px;">
               <div class="card" style="text-align: center;">
                 <div style="background: var(--bg-dark); border-radius: 8px; padding: 24px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
@@ -3400,14 +3415,14 @@ body {
                   <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 60%; max-width: 80px;">
                 </div>
                 <h4 style="font-size: 14px; font-weight: 700;">Polera dark</h4>
-                <p class="text-muted" style="font-size: 12px;">Isotipo bordado en el pecho, mono-white</p>
+                <p class="text-muted" style="font-size: 12px;">Isotipo bordado en el pecho, a color o en blanco a 1 tinta</p>
               </div>
               <div class="card-dark" style="text-align: center;">
                 <div style="background: white; border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--hairline-light);">
-                  <img src="assets/logos/logo-ancla-mono-dark.svg" alt="" style="width: 70%;">
+                  <img src="assets/logos/logo-ancla-on-light.svg" alt="" style="width: 70%;">
                 </div>
                 <h4 style="font-size: 14px; font-weight: 700;">Taza blanca</h4>
-                <p class="text-muted" style="font-size: 12px;">Logo mono-dark en wrap, 1 tinta</p>
+                <p class="text-muted" style="font-size: 12px;">Logo on-light en wrap (texto brand)</p>
               </div>
               <div class="card-dark" style="text-align: center;">
                 <div style="background: var(--bg-brand); border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
@@ -3436,7 +3451,7 @@ body {
                 <tr><td><strong>Pantone Dark</strong></td><td class="mono">Pantone Black 6 C · CMYK 75/70/55/95 · RGB 8/7/26</td></tr>
                 <tr><td><strong>Resolución mínima</strong></td><td>300 DPI para impresión offset, 150 DPI para gran formato</td></tr>
                 <tr><td><strong>Sangría</strong></td><td>3mm de sangría + 5mm de zona segura interior</td></tr>
-                <tr><td><strong>Tela bordada</strong></td><td>Solo versiones mono. Trazo mínimo 0.5mm. Isotipo a partir de 25mm de ancho.</td></tr>
+                <tr><td><strong>Tela bordada</strong></td><td>Una sola tinta, elegida del sistema (brand, blanco o dark). Trazo mínimo 0.5mm. Isotipo a partir de 25mm de ancho.</td></tr>
               </tbody>
             </table>
           </div>
@@ -3471,14 +3486,6 @@ body {
                   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
                   <span>logo-ancla-on-light.svg</span>
                 </a>
-                <a href="assets/logos/logo-ancla-mono-white.svg" download class="chip" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white;">
-                  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
-                  <span>logo-ancla-mono-white.svg</span>
-                </a>
-                <a href="assets/logos/logo-ancla-mono-dark.svg" download class="chip" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white;">
-                  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
-                  <span>logo-ancla-mono-dark.svg</span>
-                </a>
                 <a href="assets/logos/isotipo-ancla.svg" download class="chip" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white;">
                   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
                   <span>isotipo-ancla.svg</span>
@@ -3486,6 +3493,10 @@ body {
                 <a href="assets/logos/logo-ancla-recupera-on-dark.svg" download class="chip" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white;">
                   <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
                   <span>logo-ancla-recupera-on-dark.svg</span>
+                </a>
+                <a href="assets/logos/logo-ancla-recupera-on-light.svg" download class="chip" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); color: white;">
+                  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/></svg>
+                  <span>logo-ancla-recupera-on-light.svg</span>
                 </a>
               </div>
             </div>

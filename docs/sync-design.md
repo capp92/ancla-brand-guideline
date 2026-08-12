@@ -40,8 +40,9 @@ para que ambos queden idénticos por construcción — no lo bajes por contexto.
 Nueve pasos. El que se salta siempre es el 4.
 
 1. **Archivo al repo**: `assets/logos/`, `assets/icons/`, `assets/patterns/` o
-   `assets/colors/`. Nombre `logo-ancla-<marca>-<contexto>.svg` —
-   `on-dark`, `on-light`, `mono-white`, `mono-dark`.
+   `assets/colors/`. Nombre `logo-ancla-<marca>-<contexto>.svg`, con contexto
+   `on-dark` (texto blanco) u `on-light` (texto brand `#392dcf`). **No existen
+   variantes monocromas** — decisión de 2026-08-12, ver más abajo.
 2. **`index.html` §02 Logo** (o la sección que corresponda): card con
    `.logo-showcase` + `.chip-mini` de descarga.
 3. **`index.html` §16 Descargas**: `.chip` en la columna "Logos".
@@ -76,6 +77,24 @@ Los pasos 1–9 están automatizados en el skill `/brand-asset` de este repo
 | `assets/**` | `assets/logos/*`, `assets/icons/*`, `assets/patterns/*` |
 | `reference/ancla-brand-guideline.html` | `index.html` |
 
+## Decisiones tomadas
+
+**2026-08-12 · El sistema de logos son 2 archivos por marca.** Ni uno más:
+
+| Fondo | Archivo | Color del texto |
+|---|---|---|
+| dark `#08071a` / brand `#392dcf` | `logo-ancla[-recupera]-on-dark.svg` | blanco `#ffffff` |
+| light `#f4f7fc` / blanco | `logo-ancla[-recupera]-on-light.svg` | brand `#392dcf` |
+
+- **El texto negro no se usa.** La primera versión de `logo-ancla-on-light.svg` tenía
+  el wordmark en `#08071a` y estaba mal; se reemplazó por la de texto brand.
+- **No hay variantes monocromas.** Se eliminaron `logo-ancla-mono-white.svg` y
+  `logo-ancla-mono-dark.svg` del repo y del proyecto de Design. Para impresión a una
+  tinta, bordado o grabado, el proveedor recibe el archivo `on-light`/`on-dark` o el
+  isotipo y lo reproduce en un solo color. Razón: dos archivos más que mantener
+  sincronizados en tres superficies para un caso que el proveedor resuelve igual.
+- El isotipo a color sirve sobre los tres fondos — no necesita variante.
+
 ## Deuda y decisiones abiertas
 
 - **Tokens de marca por superficie.** Design define
@@ -87,8 +106,11 @@ Los pasos 1–9 están automatizados en el skill `/brand-asset` de este repo
   `logo-ancla-seguros-on-dark.svg` conviven y probablemente son el mismo arte;
   las cards `brand-logo-dark` y `brand-marcas` usan uno cada una. Elegir un nombre
   y borrar el otro.
-- **Recupera tiene una sola variante** (`on-dark`). Falta `on-light` y `mono`.
-  Es un `sed` sobre 13 `fill="white"` del SVG, no un rediseño.
+- **Alias de nombre pendiente de matar.** El ZIP `Logo Ancla Seguros claro.zip`
+  traía `logo-ancla-on-light.svg` y `logo-ancla-seguros-on-light.svg` **byte a byte
+  idénticos** (md5 `8575fbab…`). Solo se agregó el primero: un archivo, un nombre.
+  El proyecto de Design todavía arrastra el mismo problema con
+  `logo-ancla-seguros-on-dark.svg`.
 - **`logo_recupera.svg` vive en 5 lugares** (Drive + `ancla-web` ×2 +
   `ancla-web-propietarios` ×2, todos md5 `313ff96f…`). El canónico ahora es
   `assets/logos/logo-ancla-recupera-on-dark.svg` de este repo; los otros deberían
@@ -103,9 +125,11 @@ Los pasos 1–9 están automatizados en el skill `/brand-asset` de este repo
   directo en `main`. Si trabajas local sin `fetch` previo, el push rebota.
   `git pull --rebase origin main` y listo — **nunca** `--force`: el archivo
   `CNAME` en la raíz es lo que sostiene el dominio.
-- **SVG de Inkscape = 175 KB.** `logo-ancla-on-dark.svg` y sus 3 variantes pesan
-  174.889 bytes cada uno porque Inkscape embute los glyphs de la tipografía. El
-  export de Figma del logo de Recupera, con el mismo arte, pesa 14.778 bytes.
-  Para variantes nuevas, exportar limpio o recolorear el SVG existente con `sed`.
+- **SVG de Inkscape = 175 KB.** `logo-ancla-on-dark.svg` (174.889 bytes) y
+  `logo-ancla-on-light.svg` (174.798) pesan eso porque Inkscape embute los glyphs de
+  la tipografía. Los de Recupera, exportados de Figma con el mismo arte, pesan 14.8 KB.
+  Para variantes nuevas, recolorear el SVG existente con `sed` sobre los `fill`
+  (así se generó `logo-ancla-recupera-on-light.svg`: `fill="white"` → `#392dcf`),
+  y verificar en pantalla que ningún detalle interno del isotipo se pierda.
 - **`.DS_Store` quedó trackeado** en el primer commit y no está en `.gitignore`.
   Limpiarlo requiere `git rm --cached`; pendiente.
