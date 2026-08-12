@@ -707,6 +707,30 @@ section.light .chip {
 section.light .chip:hover { background: rgba(8,7,26,0.03); }
 .chip .ic { width: 16px; height: 16px; flex-shrink: 0; }
 
+.chip-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(8,7,26,0.04);
+  border: 1px solid rgba(8,7,26,0.10);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-light);
+  transition: background 0.15s, transform 0.15s;
+  margin-top: 12px;
+}
+.chip-mini:hover { background: rgba(8,7,26,0.08); transform: translateY(-1px); }
+.chip-mini svg { width: 12px; height: 12px; flex-shrink: 0; }
+section:not(.light) .chip-mini {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  color: var(--text-dark);
+}
+section:not(.light) .chip-mini:hover { background: rgba(255,255,255,0.12); }
+
 /* =====================================================================
    SOCIAL MEDIA FRAMES
    ===================================================================== */
@@ -1135,7 +1159,11 @@ section.light .text-muted { color: var(--muted-light); }
         <li><a href="#ppt"><span class="num">09</span> Presentaciones</a></li>
         <li><a href="#grafica"><span class="num">10</span> Piezas Gráficas</a></li>
         <li><a href="#landing"><span class="num">11</span> Landing Pages</a></li>
-        <li><a href="#descargas"><span class="num">12</span> Descargas</a></li>
+        <li><a href="#email"><span class="num">12</span> Email · OG · Favicon</a></li>
+        <li><a href="#whatsapp"><span class="num">13</span> WhatsApp</a></li>
+        <li><a href="#ads"><span class="num">14</span> Ads Paid</a></li>
+        <li><a href="#cobrand"><span class="num">15</span> Co-brand · Press · Merch</a></li>
+        <li><a href="#descargas"><span class="num">16</span> Descargas</a></li>
       </ul>
     </nav>
   </aside>
@@ -1286,53 +1314,124 @@ section.light .text-muted { color: var(--muted-light); }
         <div class="eyebrow"><span>02 · Logo</span></div>
         <h2 class="section-title">Logo.</h2>
         <p class="lead">
-          La "A" de Ancla es un isotipo con volumen: dos planos en cian y rosa que forman la letra,
-          con un ancla sugerida en la base. Se usa principalmente sobre fondos oscuros — ahí respira mejor.
+          La "A" de Ancla es un isotipo con volumen: dos planos en cian y violeta que forman la letra,
+          acompañada del wordmark "ANCLA SEGUROS". Hay <strong>una versión primaria que cubre el 99% de los casos</strong>
+          (la multicolor sobre dark/brand) y 4 variantes para excepciones puntuales.
         </p>
 
         <div class="stack-lg">
 
-          <!-- Variantes principales -->
+          <!-- LOGO PRIMARIO: hero card -->
           <div>
-            <h3 class="sub">Variantes principales</h3>
-            <p class="text-muted mb-4">Cada fondo tiene su versión. No hay que inventar — ya están hechas.</p>
+            <h3 class="sub">Logo primario · úsalo en el 99% de los casos</h3>
+            <p class="text-muted mb-4">
+              <strong>`logo-ancla-on-dark.svg`</strong> es el logo canónico. Texto blanco + "A" en cyan/violeta.
+              Funciona en los dos fondos primarios (dark <code>#08071a</code> y brand <code>#392dcf</code>) porque el contraste se mantiene en ambos.
+              Si dudas qué variante usar, usa este.
+            </p>
             <div class="grid-2">
-              <div class="logo-showcase logo-showcase-dark">
-                <div class="tag" style="color: rgba(255,255,255,0.6);">Sobre fondo dark</div>
-                <img src="assets/logos/logo-ancla-on-dark.svg" alt="Logo sobre dark">
+              <div>
+                <div class="logo-showcase logo-showcase-dark" style="min-height: 220px; position: relative;">
+                  <span style="position: absolute; top: 16px; right: 16px; background: var(--cyan); color: var(--bg-dark); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.08em;">PRIMARIO</span>
+                  <div class="tag" style="color: rgba(255,255,255,0.6);">Sobre fondo dark</div>
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Logo Ancla sobre dark" style="max-height: 72px;">
+                </div>
+                <a href="assets/logos/logo-ancla-on-dark.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-on-dark.svg</span>
+                </a>
               </div>
-              <div class="logo-showcase logo-showcase-brand">
-                <div class="tag" style="color: rgba(255,255,255,0.6);">Sobre fondo brand</div>
-                <img src="assets/logos/logo-ancla-on-dark.svg" alt="Logo sobre brand">
+              <div>
+                <div class="logo-showcase logo-showcase-brand" style="min-height: 220px; position: relative;">
+                  <span style="position: absolute; top: 16px; right: 16px; background: var(--cyan); color: var(--bg-dark); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.08em;">PRIMARIO</span>
+                  <div class="tag" style="color: rgba(255,255,255,0.6);">Sobre fondo brand</div>
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Logo Ancla sobre brand" style="max-height: 72px;">
+                </div>
+                <a href="assets/logos/logo-ancla-on-dark.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Mismo archivo (funciona en ambos)</span>
+                </a>
               </div>
-              
+            </div>
+            <p class="text-muted" style="font-size: 13px; margin-top: 16px; padding: 12px 16px; background: rgba(43,211,245,0.08); border-left: 3px solid var(--cyan); border-radius: 6px;">
+              <strong>Dónde se usa:</strong> landing pages, posts de social, slides de PPT, banners, ads paid, emails, OG images, WhatsApp Status, video thumbnails, press kit, merch a color. Si va sobre dark o brand → este archivo, siempre.
+            </p>
           </div>
 
-          <!-- Isotipo -->
+          <!-- Variantes secundarias (excepciones) -->
           <div>
-            <h3 class="sub">Isotipo (solo la "A")</h3>
-            <p class="text-muted mb-4">Para favicons, avatars, stickers, watermark pequeño, loading states. Nunca reemplaza al logotipo completo en pieza principal.</p>
+            <h3 class="sub">Variantes secundarias · solo para excepciones</h3>
+            <p class="text-muted mb-4">
+              Las 4 variantes de abajo cubren <strong>casos puntuales</strong> donde el primario no aplica: fondo light, impresión a 1 tinta, o cuando solo se necesita la "A".
+            </p>
             <div class="grid-3">
-              <div class="logo-showcase logo-showcase-dark" style="min-height: 140px;">
-                <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+              <div>
+                <div class="logo-showcase logo-showcase-light">
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Sobre fondo light</div>
+                  <img src="assets/logos/logo-ancla-on-light.svg" alt="Logo sobre light">
+                </div>
+                <a href="assets/logos/logo-ancla-on-light.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-on-light.svg</span>
+                </a>
+                <p class="text-muted" style="font-size: 12px; margin-top: 8px;"><strong>Solo</strong> sobre <code>#f4f7fc</code> (formularios, contenido denso).</p>
               </div>
-              <div class="logo-showcase logo-showcase-brand" style="min-height: 140px;">
-                <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+              <div>
+                <div class="logo-showcase logo-showcase-dark">
+                  <div class="tag" style="color: rgba(255,255,255,0.6);">Mono blanco</div>
+                  <img src="assets/logos/logo-ancla-mono-white.svg" alt="Logo mono blanco">
+                </div>
+                <a href="assets/logos/logo-ancla-mono-white.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-mono-white.svg</span>
+                </a>
+                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Stamp sobre foto oscura, bordado 1 tinta, watermark.</p>
               </div>
-              <div class="logo-showcase logo-showcase-light" style="min-height: 140px;">
-                <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+              <div>
+                <div class="logo-showcase logo-showcase-light">
+                  <div class="tag" style="color: rgba(8,7,26,0.6);">Mono oscuro</div>
+                  <img src="assets/logos/logo-ancla-mono-dark.svg" alt="Logo mono oscuro">
+                </div>
+                <a href="assets/logos/logo-ancla-mono-dark.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>logo-ancla-mono-dark.svg</span>
+                </a>
+                <p class="text-muted" style="font-size: 12px; margin-top: 8px;">Grabado/impresión 1 tinta sobre claro (taza, libreta).</p>
               </div>
             </div>
           </div>
 
-          <!-- Monocromos -->
+          <!-- Isotipo -->
           <div>
-            <h3 class="sub">Versiones monocromas</h3>
-            <p class="text-muted mb-4">Cuando no se puede usar el color (stamping, grabado, favicon pequeño, fax —sí, aún pasa— o watermark sobre foto).</p>
-            <div class="grid-2">
-              <div class="logo-showcase logo-showcase-dark">
-                <div class="tag" style="color: rgba(255,255,255,0.6);">Mono blanco</div>
-                <img src="assets/logos/logo-ancla-mono-white.svg" alt="Logo mono blanco">
+            <h3 class="sub">Isotipo (solo la "A") · para espacios chicos</h3>
+            <p class="text-muted mb-4">Para favicons, avatars, stickers, watermark, loading states, sello en imágenes. <strong>Nunca reemplaza al logotipo completo en pieza principal.</strong></p>
+            <div class="grid-3">
+              <div>
+                <div class="logo-showcase logo-showcase-dark" style="min-height: 140px;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+                </div>
+                <a href="assets/logos/isotipo-ancla.svg" download class="chip-mini">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>isotipo-ancla.svg</span>
+                </a>
+              </div>
+              <div>
+                <div class="logo-showcase logo-showcase-brand" style="min-height: 140px;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+                </div>
+                <span class="chip-mini" style="opacity: 0.5; pointer-events: none;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Mismo archivo</span>
+                </span>
+              </div>
+              <div>
+                <div class="logo-showcase logo-showcase-light" style="min-height: 140px;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="Isotipo" style="max-height: 72px;">
+                </div>
+                <span class="chip-mini" style="opacity: 0.5; pointer-events: none;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <span>Mismo archivo</span>
+                </span>
               </div>
             </div>
           </div>
@@ -1409,8 +1508,9 @@ section.light .text-muted { color: var(--muted-light); }
         <div class="eyebrow"><span>03 · Color</span></div>
         <h2 class="section-title">El sistema de color.</h2>
         <p class="lead">
-          Dark-mode first. Tres fondos estructurales (dark, brand, light) con reglas estrictas de texto.
-          Dos primarios (brand + CTA). Dos acentos que se pueden mezclar. El naranjo <strong>solo</strong> para acción.
+          <strong>Dual primary:</strong> <code>#08071a</code> (dark) y <code>#392dcf</code> (brand) son co-protagonistas — alterna entre ambos para no caer siempre en el mismo fondo.
+          Light <code>#f4f7fc</code> queda como soporte para contenido denso. Dos primarios de marca (brand + CTA).
+          Dos acentos que se pueden mezclar. El naranjo <strong>solo</strong> para acción.
         </p>
 
         <div class="stack-lg">
@@ -1440,26 +1540,31 @@ section.light .text-muted { color: var(--muted-light); }
           <!-- Fondos -->
           <div>
             <h3 class="sub">Fondos estructurales</h3>
-            <p class="text-muted mb-4">Tres contextos. Cada uno con su regla de texto. No se mezclan en el mismo bloque.</p>
+            <p class="text-muted mb-4">
+              Dark y Brand son <strong>co-primarios</strong> — alterna entre ambos para no caer siempre en el mismo fondo. Light es soporte para contenido denso. No se mezclan dos en el mismo bloque visual.
+            </p>
             <div class="grid-3">
-              <div class="swatch on-dark" style="background: var(--bg-dark); color: white;">
+              <div class="swatch on-dark" style="background: var(--bg-dark); color: white; position: relative;">
+                <span style="position: absolute; top: 12px; right: 12px; background: var(--cyan); color: var(--bg-dark); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; letter-spacing: 0.05em;">CO-PRIMARIO</span>
                 <div>
                   <div class="sw-name">Dark</div>
-                  <div class="sw-usage">Hero, secciones premium, nocturno. <strong>Texto blanco siempre.</strong></div>
+                  <div class="sw-usage">Hero, secciones premium, nocturno, posts impacto. <strong>Texto blanco siempre.</strong></div>
                 </div>
                 <div class="sw-hex">#08071a</div>
               </div>
-              <div class="swatch on-dark" style="background: var(--bg-brand); color: white;">
+              <div class="swatch on-dark" style="background: var(--bg-brand); color: white; position: relative;">
+                <span style="position: absolute; top: 12px; right: 12px; background: var(--cyan); color: var(--bg-dark); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; letter-spacing: 0.05em;">CO-PRIMARIO</span>
                 <div>
                   <div class="sw-name">Brand</div>
-                  <div class="sw-usage">Banners de marca, CTAs contextuales, secciones de identidad. <strong>Texto blanco siempre.</strong></div>
+                  <div class="sw-usage">Banners de marca, posts de identidad, secciones de cierre, slides de sección. <strong>Texto blanco siempre.</strong></div>
                 </div>
                 <div class="sw-hex">#392dcf</div>
               </div>
-              <div class="swatch" style="background: var(--bg-light); color: var(--text-light);">
+              <div class="swatch" style="background: var(--bg-light); color: var(--text-light); position: relative;">
+                <span style="position: absolute; top: 12px; right: 12px; background: rgba(8,7,26,0.06); color: var(--text-light); font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; letter-spacing: 0.05em;">SOPORTE</span>
                 <div>
                   <div class="sw-name">Light</div>
-                  <div class="sw-usage">Contenido denso, formularios, info. <strong>Texto #08071a siempre.</strong></div>
+                  <div class="sw-usage">Contenido denso, formularios, info, tutoriales. <strong>Texto #08071a siempre.</strong></div>
                 </div>
                 <div class="sw-hex">#f4f7fc</div>
               </div>
@@ -1516,8 +1621,8 @@ section.light .text-muted { color: var(--muted-light); }
               <li style="counter-increment: item; padding: 16px 0; border-bottom: 1px solid var(--hairline-dark); display: flex; align-items: baseline; gap: 20px;">
                 <span class="mono text-cyan" style="font-size: 13px; font-weight: 700; min-width: 24px;">01</span>
                 <div>
-                  <strong style="font-size: 15px;">Brand #392dcf</strong>
-                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— identidad, componentes, fondo brand. Color dominante.</span>
+                  <strong style="font-size: 15px;">Dark #08071a + Brand #392dcf</strong>
+                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— co-protagonistas. Alterna entre los dos como fondo principal. Texto blanco en ambos.</span>
                 </div>
               </li>
               <li style="counter-increment: item; padding: 16px 0; border-bottom: 1px solid var(--hairline-dark); display: flex; align-items: baseline; gap: 20px;">
@@ -1531,14 +1636,14 @@ section.light .text-muted { color: var(--muted-light); }
                 <span class="mono text-cyan" style="font-size: 13px; font-weight: 700; min-width: 24px;">03</span>
                 <div>
                   <strong style="font-size: 15px;">Cyan + Rose</strong>
-                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— acentos, gradiente entre ambos permitido.</span>
+                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— acentos, gradiente entre ambos permitido. Highlights, íconos destacados, números clave.</span>
                 </div>
               </li>
               <li style="counter-increment: item; padding: 16px 0; display: flex; align-items: baseline; gap: 20px;">
                 <span class="mono text-cyan" style="font-size: 13px; font-weight: 700; min-width: 24px;">04</span>
                 <div>
-                  <strong style="font-size: 15px;">Dark / Light</strong>
-                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— fondos estructurales. No mezclar en el mismo bloque.</span>
+                  <strong style="font-size: 15px;">Light #f4f7fc</strong>
+                  <span class="text-muted" style="font-size: 13px; margin-left: 8px;">— soporte para contenido denso, formularios e info. Texto <code>#08071a</code>.</span>
                 </div>
               </li>
             </ol>
@@ -1548,7 +1653,7 @@ section.light .text-muted { color: var(--muted-light); }
           <div class="do-dont">
             <div class="do">
               <span class="tag">Hacer</span>
-              <p>Dark como protagonista. Brand como capa de identidad. Light para contenido denso. Naranjo SOLO en botones de acción. Gradiente cyan→rose permitido para títulos y acentos.</p>
+              <p>Dark <strong>y</strong> Brand como co-protagonistas — alternar entre los dos para que la marca no se vuelva monótona. Light para contenido denso. Naranjo SOLO en botones de acción. Gradiente cyan→rose permitido para títulos y acentos. Gradiente dark→brand permitido para fondos atmosféricos.</p>
             </div>
             <div class="dont">
               <span class="tag">Nunca</span>
@@ -2319,20 +2424,42 @@ body {
 
           <!-- Slide portada -->
           <div>
-            <h3 class="sub">Slide de portada</h3>
-            <p class="text-muted mb-4">Dark como default. Logo chico arriba izquierda, título grande en 800, fecha/autor abajo.</p>
-            <div class="slide-frame slide-cover-dark">
-              <div style="display: flex; justify-content: space-between; align-items: start;">
-                <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 28px;">
-                <span class="text-muted mono" style="font-size: 12px;">Abril 2026</span>
+            <h3 class="sub">Slide de portada — dos variantes</h3>
+            <p class="text-muted mb-4">Dark y Brand son intercambiables. Elige según el tono: dark para informes / lanzamientos, brand para sales decks y onboarding. <strong>No uses el mismo fondo en todas tus presentaciones.</strong></p>
+            <div class="grid-2">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">A · Sobre dark</div>
+                <div class="slide-frame slide-cover-dark">
+                  <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 28px;">
+                    <span class="text-muted mono" style="font-size: 12px;">Abril 2026</span>
+                  </div>
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 16px;"><span>Informe mensual</span></div>
+                    <h4>Resultados <span style="background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Q1 2026</span></h4>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: end;">
+                    <div class="text-muted" style="font-size: 13px;">Preparado por Equipo Ancla</div>
+                    <div style="font-size: 11px; color: rgba(255,255,255,0.4);">01 / 24</div>
+                  </div>
+                </div>
               </div>
               <div>
-                <div class="eyebrow" style="margin-bottom: 16px;"><span>Informe mensual</span></div>
-                <h4>Resultados <span style="background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Q1 2026</span></h4>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: end;">
-                <div class="text-muted" style="font-size: 13px;">Preparado por Equipo Ancla</div>
-                <div style="font-size: 11px; color: rgba(255,255,255,0.4);">01 / 24</div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">B · Sobre brand</div>
+                <div class="slide-frame" style="background: var(--bg-brand); aspect-ratio: 16/9; border-radius: 16px; padding: 48px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float);">
+                  <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 28px;">
+                    <span class="mono" style="font-size: 12px; color: rgba(255,255,255,0.7);">Abril 2026</span>
+                  </div>
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 16px; color: var(--cyan);"><span>Onboarding cliente</span></div>
+                    <h4 style="font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; color: white;">Bienvenido a <span style="color: var(--cyan);">Ancla</span></h4>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; align-items: end;">
+                    <div style="font-size: 13px; color: rgba(255,255,255,0.7);">Tu nueva forma de ahorrar</div>
+                    <div style="font-size: 11px; color: rgba(255,255,255,0.5);">01 / 12</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2729,11 +2856,564 @@ body {
     </section>
 
     <!-- =================================================================
-         12 · DESCARGAS
+         12 · EMAIL · OG · FAVICON
+         ================================================================= -->
+    <section class="light" id="email">
+      <div class="section-wrap">
+        <div class="eyebrow"><span>12 · Email · OG · Favicon</span></div>
+        <h2 class="section-title">Lo digital esencial.</h2>
+        <p class="lead">
+          Firma de email, preview en redes sociales (OG/Twitter card) y favicons. Lo "invisible" que ven miles de personas cada semana. Cuando se ve bien acá, la marca se siente sólida en cada toque.
+        </p>
+
+        <div class="stack-lg">
+
+          <!-- Firma de email -->
+          <div>
+            <h3 class="sub">Firma de email</h3>
+            <p class="text-muted mb-4">Compacta, profesional, con isotipo. Sobre fondo dark o brand para destacar — nunca sobre blanco plano (queda débil).</p>
+            <div class="grid-2">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Versión brand</div>
+                <div style="background: var(--bg-brand); border-radius: 12px; padding: 24px 28px; color: white; display: flex; gap: 20px; align-items: center;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 56px; height: 56px; flex-shrink: 0;">
+                  <div style="flex: 1;">
+                    <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">María Soto</div>
+                    <div style="font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); margin-top: 2px;">Ejecutiva comercial · Ancla Seguros</div>
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.18); font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.7;">
+                      maria@anclaseguros.cl &nbsp;·&nbsp; +56 9 8765 4321<br>
+                      <a href="#" style="color: var(--cyan); text-decoration: none;">anclaseguros.cl</a> &nbsp;·&nbsp; Regulados CMF NCG 469
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Versión dark</div>
+                <div style="background: var(--bg-dark); border-radius: 12px; padding: 24px 28px; color: white; display: flex; gap: 20px; align-items: center;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 56px; height: 56px; flex-shrink: 0;">
+                  <div style="flex: 1;">
+                    <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em;">María Soto</div>
+                    <div style="font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); margin-top: 2px;">Ejecutiva comercial · Ancla Seguros</div>
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                      maria@anclaseguros.cl &nbsp;·&nbsp; +56 9 8765 4321<br>
+                      <a href="#" style="color: var(--cyan); text-decoration: none;">anclaseguros.cl</a> &nbsp;·&nbsp; Regulados CMF NCG 469
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 13px; margin-top: 16px;">
+              <strong>Reglas:</strong> isotipo 56×56px · nombre 16px / 700 · cargo 13px / 500 · contacto 12px · línea divisoria con opacidad 0.12 (dark) o 0.18 (brand) · link en cyan <code>#2bd3f5</code>. <strong>Sin emojis decorativos.</strong>
+            </p>
+          </div>
+
+          <!-- OG / Social preview -->
+          <div>
+            <h3 class="sub">OG image · Twitter card</h3>
+            <p class="text-muted mb-4">El preview cuando alguien comparte un link de Ancla en WhatsApp, LinkedIn, X o iMessage. Formato canónico: <strong>1200 × 630 px</strong>. Alterna entre dark y brand según el tipo de contenido.</p>
+            <div class="grid-2">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Default · dark</div>
+                <div style="background: var(--bg-dark); aspect-ratio: 1200/630; border-radius: 14px; padding: 56px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float); background-image: radial-gradient(ellipse at top right, rgba(43,211,245,0.12), transparent 60%), radial-gradient(ellipse at bottom left, rgba(202,75,255,0.10), transparent 60%);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 28px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 14px;"><span>Calculadora · Gratuita</span></div>
+                    <h4 style="font-size: 44px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0;">Calcula cuánto<br>puedes <span style="background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ahorrar al año.</span></h4>
+                  </div>
+                  <div style="font-size: 13px; color: rgba(255,255,255,0.6);">anclaseguros.cl/calculadora</div>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Alternativa · brand</div>
+                <div style="background: var(--bg-brand); aspect-ratio: 1200/630; border-radius: 14px; padding: 56px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 28px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 14px; color: var(--cyan);"><span>Caso real · Cliente</span></div>
+                    <h4 style="font-size: 44px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0; color: white;">"Ahorré <span style="color: var(--cyan);">$420.000</span><br>el primer año."</h4>
+                  </div>
+                  <div style="font-size: 13px; color: rgba(255,255,255,0.75);">Camila R. · Cliente Ancla · Marzo 2026</div>
+                </div>
+              </div>
+            </div>
+            <p class="text-muted" style="font-size: 13px; margin-top: 16px;">
+              <strong>HTML meta tags requeridos en cada página:</strong> <code>og:image</code>, <code>og:title</code>, <code>og:description</code>, <code>og:url</code>, <code>twitter:card</code> (summary_large_image). Generar una imagen única por landing/artículo si el contenido lo amerita.
+            </p>
+          </div>
+
+          <!-- Favicon -->
+          <div>
+            <h3 class="sub">Favicon · App icons</h3>
+            <p class="text-muted mb-4">El isotipo "A" funciona en cualquier tamaño. Set completo abajo. Para favicons sobre fondo dark/brand usa el isotipo color, sobre fondo blanco usa mono-dark.</p>
+            <div class="grid-4" style="gap: 16px;">
+              <div class="card" style="text-align: center;">
+                <div style="background: var(--bg-dark); border-radius: 8px; padding: 24px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 16px; height: 16px;">
+                </div>
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand);">16 × 16</div>
+                <p class="text-muted" style="font-size: 11px; margin-top: 4px;">favicon.ico</p>
+              </div>
+              <div class="card" style="text-align: center;">
+                <div style="background: var(--bg-dark); border-radius: 8px; padding: 20px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 32px; height: 32px;">
+                </div>
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand);">32 × 32</div>
+                <p class="text-muted" style="font-size: 11px; margin-top: 4px;">Browser tab</p>
+              </div>
+              <div class="card" style="text-align: center;">
+                <div style="background: var(--bg-brand); border-radius: 16px; padding: 16px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 56px; height: 56px;">
+                </div>
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand);">180 × 180</div>
+                <p class="text-muted" style="font-size: 11px; margin-top: 4px;">Apple touch</p>
+              </div>
+              <div class="card" style="text-align: center;">
+                <div style="background: var(--bg-brand); border-radius: 24px; padding: 28px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 96px; height: 96px;">
+                </div>
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brand);">512 × 512</div>
+                <p class="text-muted" style="font-size: 11px; margin-top: 4px;">PWA / Maskable</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Do / Don't -->
+          <div class="do-dont">
+            <div class="do">
+              <span class="tag">Sí</span>
+              <p>OG image diferente por sección (calculadora, blog, productos). Isotipo en favicons. Firma email sobre brand/dark. Alt text en OG images para accesibilidad. Mismo OG en dimensiones exactas 1200×630.</p>
+            </div>
+            <div class="dont">
+              <span class="tag">No</span>
+              <p>Firma email sobre fondo blanco corporativo plano. Favicon con texto (no se lee a 16px). OG image con &gt;3 líneas de copy. Misma OG genérica para toda la web. Logo completo en favicon — usa isotipo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         13 · WHATSAPP
+         ================================================================= -->
+    <section id="whatsapp">
+      <div class="section-wrap">
+        <div class="eyebrow"><span>13 · WhatsApp</span></div>
+        <h2 class="section-title">El canal favorito.</h2>
+        <p class="lead">
+          WhatsApp Business profile, Status diarios, broadcast y templates. Es el canal más usado por nuestros clientes — la marca tiene que verse impecable acá, no como un afterthought.
+        </p>
+
+        <div class="stack-lg">
+
+          <!-- Business profile -->
+          <div>
+            <h3 class="sub">Perfil de WhatsApp Business</h3>
+            <p class="text-muted mb-4">Foto de perfil: isotipo sobre brand (no sobre dark — en WhatsApp se ve mejor el azul). Descripción corta, directa, con dato concreto.</p>
+            <div class="grid-3" style="align-items: start;">
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--hairline-dark); border-radius: 18px; padding: 24px; text-align: center;">
+                <div style="background: var(--bg-brand); border-radius: 50%; width: 120px; height: 120px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 60px; height: 60px;">
+                </div>
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan);">Profile · 640×640</div>
+                <p class="text-muted" style="font-size: 12px; margin-top: 6px;">Isotipo centrado, sobre fondo brand</p>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--hairline-dark); border-radius: 18px; padding: 24px; grid-column: span 2;">
+                <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 12px;">Nombre + Descripción</div>
+                <div style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Ancla Seguros</div>
+                <div style="font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 16px;">
+                  Cambia tu seguro hipotecario y ahorra 25–40%. Nosotros hacemos todo. Regulados CMF · NCG 469.
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                  <span class="badge badge-cyan">Horario: L-V 9-19h</span>
+                  <span class="badge badge-cyan">anclaseguros.cl</span>
+                  <span class="badge badge-cyan">hola@anclaseguros.cl</span>
+                </div>
+                <p class="text-muted" style="font-size: 12px; margin-top: 16px;">Ubicación: solo si tienes oficina física. Email: corporativo. Web: con UTM <code>?utm_source=wa_profile</code>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status diarios -->
+          <div>
+            <h3 class="sub">Status diarios (1080×1920)</h3>
+            <p class="text-muted mb-4">Posts efímeros 24h. Alterna fondo dark ↔ brand día a día. Zona segura entre y=200 y y=1700 para evitar que el UI de WhatsApp tape el contenido.</p>
+            <div class="grid-3">
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float);">
+                <div style="background: var(--bg-dark); height: 100%; padding: 60px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 12px;"><span>Lunes · Dato</span></div>
+                    <h3 style="font-size: 34px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;">25% a 40%<br><span style="background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">de ahorro</span><br>en tu seguro.</h3>
+                  </div>
+                  <div style="font-size: 12px; color: rgba(255,255,255,0.6);">¿Te interesa? Responde este status</div>
+                </div>
+              </div>
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float);">
+                <div style="background: var(--bg-brand); height: 100%; padding: 60px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 12px; color: var(--cyan);"><span>Martes · Pregunta</span></div>
+                    <h3 style="font-size: 34px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;">¿Sabías que<br>puedes <span style="color: var(--cyan);">cambiar</span><br>tu seguro?</h3>
+                  </div>
+                  <div style="font-size: 12px; color: rgba(255,255,255,0.7);">NCG 469 te ampara</div>
+                </div>
+              </div>
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float);">
+                <div style="background: var(--bg-dark); height: 100%; padding: 60px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 12px;"><span>Miércoles · Testimonio</span></div>
+                    <h3 style="font-size: 28px; font-weight: 700; line-height: 1.15; letter-spacing: -0.015em;">"Ahorré $420K<br>el primer año."</h3>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 12px;">— Camila R., cliente Ancla</p>
+                  </div>
+                  <div style="font-size: 12px; color: rgba(255,255,255,0.6);">Más casos en anclaseguros.cl</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Templates / mensajes -->
+          <div>
+            <h3 class="sub">Mensajes templates (WhatsApp Business API)</h3>
+            <p class="text-muted mb-4">Tono cercano, tutea, cifra concreta cuando se pueda. Sin emojis decorativos — solo cuando aporten claridad. Máximo 3 párrafos.</p>
+            <div class="grid-2">
+              <div class="card-dark">
+                <div class="eyebrow" style="margin-bottom: 12px;"><span>Template · Bienvenida</span></div>
+                <div style="background: rgba(0,0,0,0.25); border-radius: 12px; padding: 18px; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.92);">
+                  <p style="margin: 0 0 12px;">Hola {{nombre}}, soy María de <strong>Ancla Seguros</strong>.</p>
+                  <p style="margin: 0 0 12px;">Vi que cotizaste hace un rato. En <strong>2 minutos</strong> te puedo decir cuánto puedes ahorrar en tu seguro hipotecario — sin compromiso.</p>
+                  <p style="margin: 0;">¿Te tinca que te llame ahora o prefieres en otro horario?</p>
+                </div>
+              </div>
+              <div class="card-dark">
+                <div class="eyebrow" style="margin-bottom: 12px;"><span>Template · Cifra de ahorro</span></div>
+                <div style="background: rgba(0,0,0,0.25); border-radius: 12px; padding: 18px; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.92);">
+                  <p style="margin: 0 0 12px;">{{nombre}}, terminamos la cotización 🎯</p>
+                  <p style="margin: 0 0 12px;">Con tu nueva póliza pagarías <strong style="color: var(--cyan);">$XX.XXX al mes</strong> en vez de $YY.YYY. Eso son <strong style="color: var(--cyan);">$ZZZ.ZZZ al año</strong> que se quedan en tu bolsillo.</p>
+                  <p style="margin: 0;">Misma cobertura. Aseguradora regulada. ¿Avanzamos?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reglas -->
+          <div class="do-dont">
+            <div class="do">
+              <span class="tag">Sí</span>
+              <p>Foto de perfil sobre brand (azul). Status diario alternando dark/brand. Tutear. Cifras concretas. Máximo 2 mensajes seguidos sin respuesta. Identificarse en cada conversación inicial.</p>
+            </div>
+            <div class="dont">
+              <span class="tag">No</span>
+              <p>Foto con texto chico que no se lee. Status sobre foto stock. Emojis decorativos en serie 😀✅💯🔥. Mensajes de spam masivo. Saludo + 5 párrafos de copy. Llamar al cliente sin avisar por chat.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         14 · ADS PAID
+         ================================================================= -->
+    <section class="light" id="ads">
+      <div class="section-wrap">
+        <div class="eyebrow"><span>14 · Ads Paid</span></div>
+        <h2 class="section-title">Ads que ahorran clic.</h2>
+        <p class="lead">
+          Meta (Instagram + Facebook), Google Display y LinkedIn. Misma marca, distintos formatos. Regla: <strong>headline corto, número grande, CTA naranjo, logo siempre.</strong> El usuario tiene 1.7 segundos para decidir si para a leer.
+        </p>
+
+        <div class="stack-lg">
+
+          <!-- Meta Feed -->
+          <div>
+            <h3 class="sub">Meta · Feed (1:1 y 4:5)</h3>
+            <p class="text-muted mb-4">Instagram y Facebook feed. Alterna fondo dark ↔ brand entre campañas para evitar fatiga visual (CTR cae 30% si el feed se vuelve monótono).</p>
+            <div class="grid-3">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">1:1 · Dark</div>
+                <div style="aspect-ratio: 1/1; background: var(--bg-dark); border-radius: 14px; padding: 36px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float); background-image: radial-gradient(ellipse at top right, rgba(43,211,245,0.10), transparent 60%);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <h3 style="font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 8px;">Ahorra hasta<br><span style="color: var(--cyan);">$300.000</span> al año.</h3>
+                    <p style="font-size: 12px; color: rgba(255,255,255,0.7);">En tu seguro hipotecario, sin trámites de tu parte.</p>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 10px 18px; font-size: 13px; align-self: flex-start;">Cotizar gratis →</button>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">1:1 · Brand</div>
+                <div style="aspect-ratio: 1/1; background: var(--bg-brand); border-radius: 14px; padding: 36px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <h3 style="font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 8px;">25–40%<br>menos en tu<br><span style="color: var(--cyan);">seguro.</span></h3>
+                    <p style="font-size: 12px; color: rgba(255,255,255,0.85);">Misma cobertura. Cambio en 48h.</p>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 10px 18px; font-size: 13px; align-self: flex-start;">Cotizar →</button>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">4:5 · Dark</div>
+                <div style="aspect-ratio: 4/5; background: var(--bg-dark); border-radius: 14px; padding: 36px; color: white; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-float);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 18px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 10px;"><span>NCG 469</span></div>
+                    <h3 style="font-size: 26px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0;">Puedes cambiar<br>tu seguro<br>hipotecario.</h3>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 12px;">El banco no te lo dice. La ley sí.</p>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 10px 18px; font-size: 13px; align-self: flex-start;">Quiero saber más →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stories / Reels -->
+          <div>
+            <h3 class="sub">Meta · Stories / Reels (9:16)</h3>
+            <p class="text-muted mb-4">Headline en zona segura central. CTA "Swipe up" o sticker de link. Logo arriba izquierda.</p>
+            <div class="grid-3">
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float); max-width: 280px; margin: 0 auto;">
+                <div style="background: var(--bg-dark); height: 100%; padding: 64px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white; background-image: radial-gradient(ellipse at top, rgba(43,211,245,0.12), transparent 50%);">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 16px;">
+                  <div>
+                    <h3 style="font-size: 32px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;">Tu banco no te lo dice.<br><span style="background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">La ley sí.</span></h3>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 14px 22px; font-size: 14px; align-self: stretch; text-align: center;">Cotizar gratis →</button>
+                </div>
+              </div>
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float); max-width: 280px; margin: 0 auto;">
+                <div style="background: var(--bg-brand); height: 100%; padding: 64px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 16px;">
+                  <div>
+                    <div style="font-size: 14px; font-weight: 600; color: var(--cyan); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px;">→ 1 de cada 3</div>
+                    <h3 style="font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;">chilenos paga<br>de más por<br>su seguro<br>hipotecario.</h3>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 14px 22px; font-size: 14px; align-self: stretch; text-align: center;">¿Yo también? →</button>
+                </div>
+              </div>
+              <div class="social-frame" style="aspect-ratio: 9/16; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-float); max-width: 280px; margin: 0 auto;">
+                <div style="background: var(--bg-dark); height: 100%; padding: 64px 28px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 16px;">
+                  <div>
+                    <div class="eyebrow" style="margin-bottom: 14px;"><span>Caso real</span></div>
+                    <div style="font-size: 56px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--cyan), var(--rose)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$420K</div>
+                    <p style="font-size: 15px; color: rgba(255,255,255,0.85); margin-top: 14px;">ahorrados el primer año<br>por Camila R.</p>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 14px 22px; font-size: 14px; align-self: stretch; text-align: center;">Calcular el mío →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Display + LinkedIn -->
+          <div>
+            <h3 class="sub">Google Display + LinkedIn</h3>
+            <p class="text-muted mb-4">Formatos horizontales y leaderboards. El logo se reduce — usa isotipo si el espacio es muy chico (&lt;120px ancho).</p>
+            <div class="stack-lg">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Google Display · 728 × 90 leaderboard</div>
+                <div style="background: var(--bg-dark); border-radius: 10px; padding: 16px 28px; color: white; display: flex; align-items: center; justify-content: space-between; gap: 24px; aspect-ratio: 728/90; max-height: 110px;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 24px;">
+                  <div style="font-size: 18px; font-weight: 700; letter-spacing: -0.01em; flex: 1; text-align: center;">Ahorra hasta <span style="color: var(--cyan);">$300.000/año</span> en tu seguro hipotecario.</div>
+                  <button class="btn btn-cta" style="padding: 10px 18px; font-size: 13px; flex-shrink: 0;">Cotizar →</button>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">LinkedIn Sponsored · 1200 × 627</div>
+                <div style="background: var(--bg-brand); border-radius: 10px; padding: 40px; color: white; display: flex; align-items: center; gap: 32px; aspect-ratio: 1200/627; max-height: 280px;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="" style="height: 22px; flex-shrink: 0;">
+                  <div style="flex: 1;">
+                    <div class="eyebrow" style="color: var(--cyan); margin-bottom: 10px;"><span>Para profesionales</span></div>
+                    <h3 style="font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin: 0;">¿Sabías que puedes cambiar el seguro de tu hipoteca?</h3>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 10px;">25–40% de ahorro · Misma cobertura · Sin trámites</p>
+                  </div>
+                  <button class="btn btn-cta" style="padding: 12px 22px; font-size: 14px; flex-shrink: 0;">Cotizar →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabla de formatos -->
+          <div class="card">
+            <h4 class="mini" style="color: var(--brand);">Formatos canónicos · checklist</h4>
+            <table class="rules">
+              <thead><tr><th style="text-align: left; padding: 8px 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-light);">Plataforma</th><th style="text-align: left; padding: 8px 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-light);">Formato</th><th style="text-align: left; padding: 8px 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted-light);">Uso</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Meta Feed</strong></td><td class="mono">1080×1080 (1:1) · 1080×1350 (4:5)</td><td>Awareness + conversión</td></tr>
+                <tr><td><strong>Meta Stories/Reels</strong></td><td class="mono">1080×1920 (9:16)</td><td>Awareness + brand</td></tr>
+                <tr><td><strong>Meta Carousel</strong></td><td class="mono">1080×1080 (1:1) · 5 cards</td><td>Educación · funnel medio</td></tr>
+                <tr><td><strong>Google Display</strong></td><td class="mono">728×90 · 300×250 · 336×280 · 320×100</td><td>Retargeting + display</td></tr>
+                <tr><td><strong>Google Discovery</strong></td><td class="mono">1200×628 · 1200×1200</td><td>Awareness amplio</td></tr>
+                <tr><td><strong>LinkedIn</strong></td><td class="mono">1200×627 (single) · 1080×1080 (carrusel)</td><td>B2B + corredores</td></tr>
+                <tr><td><strong>YouTube Bumper</strong></td><td class="mono">6s video · 1920×1080</td><td>Brand recall</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         15 · CO-BRAND · PRESS · MERCH
+         ================================================================= -->
+    <section id="cobrand">
+      <div class="section-wrap">
+        <div class="eyebrow"><span>15 · Co-brand · Press · Merch</span></div>
+        <h2 class="section-title">Ancla con otras marcas.</h2>
+        <p class="lead">
+          Cuando Ancla aparece junto a bancos partners, en prensa, o en merchandising. Reglas claras para no perder identidad cuando la marca convive con otras.
+        </p>
+
+        <div class="stack-lg">
+
+          <!-- Co-branding -->
+          <div>
+            <h3 class="sub">Co-branding con bancos</h3>
+            <p class="text-muted mb-4">Cuando Ancla aparece junto a BancoEstado, Santander, BCI, Itaú, Scotiabank, etc. Logo de Ancla siempre al mismo peso visual que el partner. Separador vertical sutil.</p>
+            <div class="grid-2">
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Lockup horizontal · sobre dark</div>
+                <div style="background: var(--bg-dark); border-radius: 14px; padding: 56px 48px; display: flex; align-items: center; justify-content: center; gap: 40px;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 32px;">
+                  <div style="width: 1px; height: 36px; background: rgba(255,255,255,0.25);"></div>
+                  <div style="color: rgba(255,255,255,0.85); font-weight: 700; font-size: 18px; letter-spacing: -0.01em;">Banco<br>Partner</div>
+                </div>
+              </div>
+              <div>
+                <div class="tag" style="color: var(--muted-light); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;">Lockup horizontal · sobre brand</div>
+                <div style="background: var(--bg-brand); border-radius: 14px; padding: 56px 48px; display: flex; align-items: center; justify-content: center; gap: 40px;">
+                  <img src="assets/logos/logo-ancla-on-dark.svg" alt="Ancla" style="height: 32px;">
+                  <div style="width: 1px; height: 36px; background: rgba(255,255,255,0.4);"></div>
+                  <div style="color: rgba(255,255,255,0.95); font-weight: 700; font-size: 18px; letter-spacing: -0.01em;">Banco<br>Partner</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-dark" style="margin-top: 24px;">
+              <h4 class="mini" style="margin-bottom: 16px;">Reglas de co-branding</h4>
+              <table class="rules">
+                <tbody>
+                  <tr><td style="width: 30%;"><strong>Peso visual</strong></td><td>Logos al mismo alto óptico (no necesariamente mismo tamaño en px — depende del ancho).</td></tr>
+                  <tr><td><strong>Separador</strong></td><td>Línea vertical sutil de 1px, opacidad 0.25 sobre dark / 0.40 sobre brand.</td></tr>
+                  <tr><td><strong>Orden</strong></td><td>Ancla siempre a la izquierda. El banco a la derecha.</td></tr>
+                  <tr><td><strong>Espaciado</strong></td><td>Mínimo 40px entre logos. Clear space del partner respetado.</td></tr>
+                  <tr><td><strong>NO se permite</strong></td><td>Mezclar logos, modificar colores del partner, usar versión vertical de Ancla en lockup horizontal.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Press kit -->
+          <div>
+            <h3 class="sub">Press kit</h3>
+            <p class="text-muted mb-4">Lo que se entrega a medios y periodistas. Carpeta autocontenida con todo lo necesario para que escriban sobre Ancla sin tener que pedirnos nada.</p>
+            <div class="grid-3">
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(43,211,245,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--cyan);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">One-pager corporativo</h4>
+                <p class="text-muted" style="font-size: 13px;">PDF con propuesta de valor, cifras clave, equipo fundador, regulación CMF.</p>
+              </div>
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(202,75,255,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--rose);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Set de logos</h4>
+                <p class="text-muted" style="font-size: 13px;">5 variantes SVG + PNG en alta resolución. Mismas variantes que esta guía.</p>
+              </div>
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(255,131,34,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--cta);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Fotos de equipo</h4>
+                <p class="text-muted" style="font-size: 13px;">Founders + spokespeople, fondo dark/brand, sin retoque excesivo. Mín 2400×1600.</p>
+              </div>
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(43,211,245,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--cyan);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Hoja de cifras</h4>
+                <p class="text-muted" style="font-size: 13px;">Clientes atendidos, ahorro promedio, tiempo de gestión, NPS. Actualizada trimestralmente.</p>
+              </div>
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(202,75,255,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--rose);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Quotes vocero</h4>
+                <p class="text-muted" style="font-size: 13px;">3–5 declaraciones listas para citar. Pre-aprobadas por legal. Atribución correcta.</p>
+              </div>
+              <div class="card-dark">
+                <div style="width: 40px; height: 40px; border-radius: 8px; background: rgba(255,131,34,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--cta);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 6px;">Contacto prensa</h4>
+                <p class="text-muted" style="font-size: 13px;">Email directo: <code style="font-size: 12px;">prensa@anclaseguros.cl</code>. Respuesta en &lt;24h hábiles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Merch -->
+          <div>
+            <h3 class="sub">Merch básico</h3>
+            <p class="text-muted mb-4">Lo que se imprime físicamente: poleras de equipo, taza, sticker pack, libreta. Mantén los colores exactos (Pantone reference abajo). Sobre tela / cerámica, usa siempre versiones de alto contraste.</p>
+            <div class="grid-4">
+              <div class="card-dark" style="text-align: center;">
+                <div style="background: var(--bg-dark); border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--hairline-dark);">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 60%; max-width: 80px;">
+                </div>
+                <h4 style="font-size: 14px; font-weight: 700;">Polera dark</h4>
+                <p class="text-muted" style="font-size: 12px;">Isotipo bordado en el pecho, mono-white</p>
+              </div>
+              <div class="card-dark" style="text-align: center;">
+                <div style="background: white; border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--hairline-light);">
+                  <img src="assets/logos/logo-ancla-mono-dark.svg" alt="" style="width: 70%;">
+                </div>
+                <h4 style="font-size: 14px; font-weight: 700;">Taza blanca</h4>
+                <p class="text-muted" style="font-size: 12px;">Logo mono-dark en wrap, 1 tinta</p>
+              </div>
+              <div class="card-dark" style="text-align: center;">
+                <div style="background: var(--bg-brand); border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;">
+                  <img src="assets/logos/isotipo-ancla.svg" alt="" style="width: 60%; max-width: 80px;">
+                </div>
+                <h4 style="font-size: 14px; font-weight: 700;">Sticker brand</h4>
+                <p class="text-muted" style="font-size: 12px;">Die-cut isotipo, troquelado, vinilo</p>
+              </div>
+              <div class="card-dark" style="text-align: center;">
+                <div style="background: var(--bg-light); border-radius: 12px; padding: 24px; margin-bottom: 12px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: 1px solid var(--hairline-light);">
+                  <img src="assets/logos/logo-ancla-on-light.svg" alt="" style="width: 80%;">
+                </div>
+                <h4 style="font-size: 14px; font-weight: 700;">Libreta A5</h4>
+                <p class="text-muted" style="font-size: 12px;">Logo on-light en portada, papel cream</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Print specs -->
+          <div class="card-dark">
+            <h4 class="mini">Specs para impresión</h4>
+            <table class="rules">
+              <tbody>
+                <tr><td style="width: 30%;"><strong>Pantone Brand</strong></td><td class="mono">Pantone 2728 C · CMYK 89/77/0/0 · RGB 57/45/207</td></tr>
+                <tr><td><strong>Pantone CTA</strong></td><td class="mono">Pantone 1495 C · CMYK 0/55/85/0 · RGB 255/131/34</td></tr>
+                <tr><td><strong>Pantone Dark</strong></td><td class="mono">Pantone Black 6 C · CMYK 75/70/55/95 · RGB 8/7/26</td></tr>
+                <tr><td><strong>Resolución mínima</strong></td><td>300 DPI para impresión offset, 150 DPI para gran formato</td></tr>
+                <tr><td><strong>Sangría</strong></td><td>3mm de sangría + 5mm de zona segura interior</td></tr>
+                <tr><td><strong>Tela bordada</strong></td><td>Solo versiones mono. Trazo mínimo 0.5mm. Isotipo a partir de 25mm de ancho.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         16 · DESCARGAS
          ================================================================= -->
     <section class="brand" id="descargas">
       <div class="section-wrap">
-        <div class="eyebrow" style="color: white;"><span>12 · Descargas</span></div>
+        <div class="eyebrow" style="color: white;"><span>16 · Descargas</span></div>
         <h2 class="section-title">Todo lo que necesitas, ya.</h2>
         <p class="lead" style="color: rgba(255,255,255,0.85);">
           Esta carpeta es autosuficiente. No hace falta acceder a ningún Drive, Figma ni Dropbox.
