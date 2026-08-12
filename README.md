@@ -20,12 +20,13 @@ ancla-brand-guideline/
 ├── index.html                          ← La presentación completa (16 secciones)
 ├── README.md                           ← Este archivo
 └── assets/
-    ├── logos/                          ← 5 variantes del logo + isotipo
+    ├── logos/                          ← 4 variantes Seguros + isotipo + Recupera
     │   ├── logo-ancla-on-dark.svg      ← Sobre fondo oscuro (#08071a) o brand (#392dcf)
     │   ├── logo-ancla-on-light.svg     ← Sobre fondo claro (#f4f7fc)
     │   ├── logo-ancla-mono-white.svg   ← Monocromo blanco (para stamps y overlays)
     │   ├── logo-ancla-mono-dark.svg    ← Monocromo oscuro (para grabados)
-    │   └── isotipo-ancla.svg           ← Solo la "A" (favicon, avatar, watermark)
+    │   ├── isotipo-ancla.svg           ← Solo la "A" (favicon, avatar, watermark)
+    │   └── logo-ancla-recupera-on-dark.svg ← Marca Ancla Recupera (solo sobre dark)
     ├── icons/                          ← 30 íconos custom en estilo Lucide
     │   └── (arrow-right, bank, calculator, chart-down, shield-check, …)
     ├── colors/
