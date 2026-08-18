@@ -19,6 +19,9 @@ Comprimir la carpeta completa en un ZIP y enviar. Todos los recursos están aden
 ancla-brand-guideline/
 ├── index.html                          ← La presentación completa (16 secciones)
 ├── README.md                           ← Este archivo
+├── docs/                               ← Cómo se mantiene la marca
+│   ├── sync-design.md                  ← Sync repo ↔ web ↔ Claude Design (SSoT del flujo)
+│   └── prompts-imagenes.md             ← Prompts de imagen IA para el banco de assets
 └── assets/
     ├── logos/                          ← 2 archivos por marca + isotipo
     │   ├── logo-ancla-on-dark.svg      ← Seguros sobre dark (#08071a) o brand (#392dcf)
@@ -33,8 +36,13 @@ ancla-brand-guideline/
     ├── colors/
     │   ├── ancla-tokens.css            ← Variables CSS para pegar en web
     │   └── ancla-tokens.json           ← Design tokens para Figma / Storybook / etc
-    └── patterns/
-        └── grid-dark.svg               ← Patrón de grid para hero sections
+    ├── patterns/
+    │   └── grid-dark.svg               ← Patrón de grid para hero sections
+    └── images/                         ← Banco de imágenes IA — ver docs/prompts-imagenes.md
+        ├── 3d/                         ← 9 renders 3D (casa, edificio, banco, calculadora,
+        │                                  llave, escudo, gráfico, detector de humo, sismo)
+        └── foto/                       ← 12 fotos (11 vívidas + 1 fría) de propiedades,
+                                            trámite e interiores, ancladas en Santiago
 ```
 
 ## Secciones del index.html
